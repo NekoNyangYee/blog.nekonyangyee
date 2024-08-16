@@ -178,7 +178,7 @@ const PostLayout = ({ params }: { params: { slug: string[] } }) => {
           {nextPost && (
             <Link href={`/${nextPost._raw.flattenedPath}`}>
               <div className="next-prev-container">
-                <img src={nextPost.teaser} alt={nextPost.title} />
+                <img src={nextPost.teaser === null ? "/no-image.png" : nextPost.teaser} alt={nextPost.title} />
                 <span>
                   다음 포스트
                   <p>{nextPost.title}</p>
@@ -190,7 +190,7 @@ const PostLayout = ({ params }: { params: { slug: string[] } }) => {
           {previousPost && (
             <Link href={`/${previousPost._raw.flattenedPath}`}>
               <div className="next-prev-container">
-                <img src={previousPost.teaser} alt={previousPost.title} />
+                <img src={previousPost.teaser === null ? "/no-image.png" : previousPost.teaser} alt={previousPost.title} />
                 <span>
                   이전 포스트
                   <p>{previousPost.title}</p>
