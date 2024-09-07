@@ -736,7 +736,7 @@ const PostList = ({ allPosts }: { allPosts: any }) => {
                     </div>
                     <div className="post-container">
                         {(paginatedPosts.map((post: Post) => (
-                            <div className="article-container">
+                            <div className="article-container" key={post._id}>
                                 <Link href={post.url} key={post._id}>
                                     <article key={post._id}>
                                         <div className="description-area">

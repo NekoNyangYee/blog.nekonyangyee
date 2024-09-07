@@ -4,19 +4,14 @@ import Link from "next/link";
 import { Post, allPosts } from "contentlayer/generated";
 import { format } from "date-fns";
 import { StyledSelectCategoryPost } from "./styleSelectCategoryPost";
-import { usePathname } from "next/navigation";
 
 interface SelectCategoryPostProps {
   category: string;
 }
 
 const SelectCategoryPost = ({ category }: SelectCategoryPostProps) => {
-  const pathName = usePathname();
   const categoryPosts: Post[] = allPosts
     .filter((post) => post.category === category)
-    .filter((post) => {
-      return `/${post._raw.flattenedPath}` !== pathName;
-    })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
