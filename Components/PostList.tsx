@@ -589,6 +589,7 @@ const PostList = ({ allPosts }: { allPosts: any }) => {
         { title: "TypeScript", keyword: "TypeScript" },
         { title: "Python3", keyword: "Python3" },
         { title: "NodeJS", keyword: "NodeJS" },
+        { title: "JAVA", keyword: "JAVA" },
         { title: "기타 개발", keyword: "기타 개발" },
         { title: "알고리즘", keyword: "알고리즘" },
         { title: "프로그래머스", keyword: "프로그래머스" },
